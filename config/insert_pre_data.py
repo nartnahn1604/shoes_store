@@ -1,7 +1,7 @@
 from db import conn
 import json
 
-f = open("../config/data.json")
+f = open("config/data.json")
 
 data = json.load(f)
 
