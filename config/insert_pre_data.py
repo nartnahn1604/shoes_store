@@ -1,4 +1,4 @@
-from db import conn
+import db
 import json
 
 f = open("config/data.json")
@@ -6,7 +6,7 @@ f = open("config/data.json")
 data = json.load(f)
 
 for item in data["shoes"]:
-    conn.storedb.shoes.insert_one(
+    db.collection.insert_one(
         {
             "image": item["image"],
             "name": item["name"],
